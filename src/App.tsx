@@ -1,10 +1,12 @@
 import React, { ReactElement } from 'react'
-import styles from './App.module.scss'
+import Container from './components/layout/Container'
+import './App.scss'
 
 function App(): ReactElement {
   return (
-    <div className={styles.App}>
+    <div className="App">
       <h1> Testing </h1>
+      <Container></Container>
     </div>
   )
 }
