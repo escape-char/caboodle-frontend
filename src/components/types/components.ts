@@ -16,6 +16,7 @@ export enum Spacing {
 
 export type BaseProps = {
   className?: string
+  role?: string
   style?: Record<string, unknown>
 }
 export type BasePropsChildren = BaseProps & {
