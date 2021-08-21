@@ -1,0 +1,67 @@
+/* Mobile */
+@media only screen and (min-width: $maxPhoneWidth) {
+  [class*='mobile-hidden'],
+  [class*='tablet-only'],
+  [class*='small-mon-only'],
+  [class*='large-mon-only'],
+  [class*='wide-mon-only'],
+  [class*='tablet-lower-hidden'],
+  [class*='small-mon-lower-hidden'],
+  [class*='large-mon-lower-hidden'],
+  [class*='wide-mon-lower-hidden'] {
+    display: none !important;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: $minTabletWidth) and (max-width: $maxTabletWidth) {
+  [class*='mobile-only'],
+  [class*='tablet-hidden'],
+  [class*='small-mon-only'],
+  [class*='large-mon-only'],
+  [class*='wide-mon-only'],
+  [class*='tablet-lower-hidden'],
+  [class*='small-mon-lower-hidden'],
+  [class*='large-mon-lower-hidden'],
+  [class*='wide-mon-lower-hidden'] {
+    display: none !important;
+  }
+}
+
+/* Small Monitors, Table landscape*/
+@media only screen and (min-width: $minComputerWidth) and (max-width: $maxComputerWidth) {
+  [class*='mobile-only'],
+  [class*='tablet-only'],
+  [class*='small-mon-hidden'],
+  [class*='large-mon-only'],
+  [class*='wide-mon-only'],
+  [class*='small-mon-lower-hidden'],
+  [class*='large-mon-lower-hidden'],
+  [class*='wide-mon-lower-hidden'] {
+    display: none !important;
+  }
+}
+/* Large Monitor */
+@media only screen and (min-width: $minLargeMonitorWidth) and (max-width: $maxComputerWidth) {
+  [class*='mobile-only'],
+  [class*='tablet-only'],
+  [class*='small-mon-only'],
+  [class*='large-mon-hidden'],
+  [class*='wide-mon-only'],
+  [class*='large-mon-lower-hidden'],
+  [class*='wide-mon-lower-hidden'] {
+    display: none !important;
+  }
+}
+
+/* Widescreen Monitor */
+@media only screen and (min-width: $minWideMonitorWidth) {
+  [class*='mobile-only'],
+  [class*='tablet-only'],
+  [class*='small-mon-only'],
+  [class*='large-mon-only'],
+  [class*='wide-mon-hidden'],
+  [class*='wide-mon-lower-hidden'] {
+    display: none !important;
+  }
+}
