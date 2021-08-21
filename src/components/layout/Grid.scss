@@ -1,0 +1,360 @@
+@import '../../scss/variables';
+
+$gridSize: 16;
+
+$oneColumn: percentage(1 / $gridSize);
+$twoColumn: percentage(2 / $gridSize);
+$threeColumn: percentage(3 / $gridSize);
+$fourColumn: percentage(4 / $gridSize);
+$fiveColumn: percentage(5 / $gridSize);
+$sixColumn: percentage(6 / $gridSize);
+$sevenColumn: percentage(7 / $gridSize);
+$eightColumn: percentage(8 / $gridSize);
+$nineColumn: percentage(9 / $gridSize);
+$tenColumn: percentage(10 / $gridSize);
+$elevenColumn: percentage(11 / $gridSize);
+$twelveColumn: percentage(12 / $gridSize);
+$thirteenColumn: percentage(13 / $gridSize);
+$fourteenColumn: percentage(14 / $gridSize);
+$fifteenColumn: percentage(15 / $gridSize);
+$sixteenColumn: percentage(16 / $gridSize);
+
+.grid {
+  display: flex;
+  padding: $spacing2;
+  flex-wrap: wrap;
+
+  .row {
+    flex-direction: row;
+    width: 100%;
+    flex-basis: 100%;
+
+    .col {
+      flex-direction: column;
+
+      &.col-1 {
+        width: $oneColumn;
+      }
+      &.col2 {
+        width: $twoColumn;
+      }
+      &.col3 {
+        width: $threeColumn;
+      }
+      &.col4 {
+        width: $fourColumn;
+      }
+      &.col5 {
+        width: $fiveColumn;
+      }
+      &.col6 {
+        width: $sixColumn;
+      }
+      &.col7 {
+        width: $sevenColumn;
+      }
+      &.col8 {
+        width: $eightColumn;
+      }
+      &.col9 {
+        width: $nineColumn;
+      }
+      &.col10 {
+        width: $tenColumn;
+      }
+      &.col11 {
+        width: $elevenColumn;
+      }
+      &.col12 {
+        width: $twelveColumn;
+      }
+      &.col13 {
+        width: $thirteenColumn;
+      }
+      &.col14 {
+        width: $fourteenColumn;
+      }
+      &.col15 {
+        width: $fifteenColumn;
+      }
+      &.col16 {
+        width: $sixteenColumn;
+      }
+    }
+  }
+}
+
+/**
+* We can define column sizes per device
+*/
+
+/* Mobile */
+@media only screen and (min-width: $maxPhoneWidth) {
+  .grid .row .col {
+    &.mobile-col1 {
+      width: $oneColumn;
+    }
+    &.mobile-col2 {
+      width: $twoColumn;
+    }
+    &.mobile-col3 {
+      width: $threeColumn;
+    }
+    &.mobile-col4 {
+      width: $fourColumn;
+    }
+    &.mobile-col5 {
+      width: $fiveColumn;
+    }
+    &.mobile-col6 {
+      width: $sixColumn;
+    }
+    &.mobile-col7 {
+      width: $sevenColumn;
+    }
+    &.mobile-col8 {
+      width: $eightColumn;
+    }
+    &.mobile-col9 {
+      width: $nineColumn;
+    }
+    &.mobile-col10 {
+      width: $tenColumn;
+    }
+    &.mobile-col11 {
+      width: $elevenColumn;
+    }
+    &.mobile-col12 {
+      width: $twelveColumn;
+    }
+    &.mobile-col13 {
+      width: $thirteenColumn;
+    }
+    &.mobile-col14 {
+      width: $fourteenColumn;
+    }
+    &.mobile-col15 {
+      width: $fourteenColumn;
+    }
+    &.mobile-col16 {
+      width: $sixteenColumn;
+    }
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: $minTabletWidth) and (max-width: $maxTabletWidth) {
+  .grid .row .col {
+    &.tablet-col1 {
+      width: $oneColumn;
+    }
+    &.tablet-col2 {
+      width: $twoColumn;
+    }
+    &.tablet-col3 {
+      width: $threeColumn;
+    }
+    &.tablet-col4 {
+      width: $fourColumn;
+    }
+    &.tablet-col5 {
+      width: $fiveColumn;
+    }
+    &.tablet-col6 {
+      width: $sixColumn;
+    }
+    &.tablet-col7 {
+      width: $sevenColumn;
+    }
+    &.tablet-col8 {
+      width: $eightColumn;
+    }
+    &.tablet-col9 {
+      width: $nineColumn;
+    }
+    &.tablet-col10 {
+      width: $tenColumn;
+    }
+    &.tablet-col11 {
+      width: $elevenColumn;
+    }
+    &.tablet-col12 {
+      width: $twelveColumn;
+    }
+    &.tablet-col13 {
+      width: $thirteenColumn;
+    }
+    &.tablet-col14 {
+      width: $fourteenColumn;
+    }
+    &.tablet-col15 {
+      width: $fourteenColumn;
+    }
+    &.tablet-col16 {
+      width: $sixteenColumn;
+    }
+  }
+}
+/* Small Monitors */
+@media only screen and (min-width: $maxPhoneWidth) {
+  .grid .row .col {
+    &.small-mon-col1 {
+      width: $oneColumn;
+    }
+    &.small-mon-col2 {
+      width: $twoColumn;
+    }
+    &.small-mon-col3 {
+      width: $threeColumn;
+    }
+    &.small-mon-col4 {
+      width: $fourColumn;
+    }
+    &.small-mon-col5 {
+      width: $fiveColumn;
+    }
+    &.small-mon-col6 {
+      width: $sixColumn;
+    }
+    &.small-mon-col7 {
+      width: $sevenColumn;
+    }
+    &.small-mon-col8 {
+      width: $eightColumn;
+    }
+    &.small-mon-col9 {
+      width: $nineColumn;
+    }
+    &.small-mon-col10 {
+      width: $tenColumn;
+    }
+    &.small-mon-col11 {
+      width: $elevenColumn;
+    }
+    &.small-mon-col12 {
+      width: $twelveColumn;
+    }
+    &.small-mon-col13 {
+      width: $thirteenColumn;
+    }
+    &.small-mon-col14 {
+      width: $fourteenColumn;
+    }
+    &.small-mon-col15 {
+      width: $fourteenColumn;
+    }
+    &.small-mon-col16 {
+      width: $sixteenColumn;
+    }
+  }
+}
+
+/* Large Monitors */
+@media only screen and (min-width: $maxPhoneWidth) {
+  .grid .row .col {
+    &.large-mon-col1 {
+      width: $oneColumn;
+    }
+    &.large-mon-col2 {
+      width: $twoColumn;
+    }
+    &.large-mon-col3 {
+      width: $threeColumn;
+    }
+    &.large-mon-col4 {
+      width: $fourColumn;
+    }
+    &.large-mon-col5 {
+      width: $fiveColumn;
+    }
+    &.large-mon-col6 {
+      width: $sixColumn;
+    }
+    &.large-mon-col7 {
+      width: $sevenColumn;
+    }
+    &.large-mon-col8 {
+      width: $eightColumn;
+    }
+    &.large-mon-col9 {
+      width: $nineColumn;
+    }
+    &.large-mon-col10 {
+      width: $tenColumn;
+    }
+    &.large-mon-col11 {
+      width: $elevenColumn;
+    }
+    &.large-mon-col12 {
+      width: $twelveColumn;
+    }
+    &.large-mon-col13 {
+      width: $thirteenColumn;
+    }
+    &.large-mon-col14 {
+      width: $fourteenColumn;
+    }
+    &.large-mon-col15 {
+      width: $fourteenColumn;
+    }
+    &.large-mon-col16 {
+      width: $sixteenColumn;
+    }
+  }
+}
+
+/* Widescreen Monitor */
+@media only screen and (min-width: $minWideMonitorWidth) {
+  .grid .row .col {
+    &.wide-mon-col1 {
+      width: $oneColumn;
+    }
+    &.wide-mon-col2 {
+      width: $twoColumn;
+    }
+    &.wide-mon-col3 {
+      width: $threeColumn;
+    }
+    &.wide-mon-col4 {
+      width: $fourColumn;
+    }
+    &.wide-mon-col5 {
+      width: $fiveColumn;
+    }
+    &.wide-mon-col6 {
+      width: $sixColumn;
+    }
+    &.wide-mon-col7 {
+      width: $sevenColumn;
+    }
+    &.wide-mon-col8 {
+      width: $eightColumn;
+    }
+    &.wide-mon-col9 {
+      width: $nineColumn;
+    }
+    &.wide-mon-col10 {
+      width: $tenColumn;
+    }
+    &.wide-mon-col11 {
+      width: $elevenColumn;
+    }
+    &.wide-mon-col12 {
+      width: $twelveColumn;
+    }
+    &.wide-mon-col13 {
+      width: $thirteenColumn;
+    }
+    &.wide-mon-col14 {
+      width: $fourteenColumn;
+    }
+    &.wide-mon-col15 {
+      width: $fourteenColumn;
+    }
+    &.wide-mon-col16 {
+      width: $sixteenColumn;
+    }
+  }
+}
+
+@import '../../scss/devices';
