@@ -1,0 +1,89 @@
+$blue1: #e6f7ff;
+$blue2: #bae7ff;
+$blue3: #91d5ff;
+$blue4: #69c0ff;
+$blue5: #40a9ff;
+$blue6: #1890ff;
+$blue7: #096dd9;
+$blue8: #0050b3;
+$blue9: #003a8c;
+$blue10: #002766;
+
+$green: #52c41a;
+$red: #ff4d4f;
+$yellow: #fadb14;
+
+$white: white;
+$black: black;
+
+//font colors;
+$primaryColor: lighten($black, 15%);
+$secondaryColor: lighten($black, 55%);
+$disableColor: lighten($black, 75%);
+
+$borderColor: lighten($black, 85%);
+$defaultBorderRadius: 5px;
+$dividerColor: lighten($black, 94%);
+
+$background: lighten(black, 96%);
+$tableHeaderColor: lighten(black, 98%);
+
+$linkColor: $blue6;
+
+//status colors
+$successColor: $green;
+$errorColor: $red;
+$warningColor: $yellow;
+$infoColor: $blue6;
+
+//spacing
+$spacing1: 4px;
+$spacing2: 8px;
+$spacing3: 16px;
+$spacing4: 24px;
+$spacing5: 32px;
+$spacing6: 48px;
+$spacing7: 80px;
+$spacing8: 128px;
+
+//font size
+$fontSize1: 8px;
+$fontSize2: 12px;
+$fontSize3: 14px;
+$fontSize4: 16px;
+$fontSize4: 20px;
+$fontSize6: 24px;
+$fontSize7: 30px;
+$fontSize8: 38px;
+$fontSize9: 46px;
+$fontSize10: 56px;
+$fontSize11: 68px;
+
+//line height
+$lineHeight1: 18px;
+$lineHeight2: 20px;
+$lineHeight3: 22px;
+$lineHeight4: 24px;
+$lineHeight5: 28px;
+$lineHeight6: 32px;
+$lineHeight7: 38px;
+$lineHeight8: 46px;
+$lineHeight9: 54px;
+$lineHeight10: 64px;
+$lineHeight1: 76px;
+
+$defaultLineHeight: $lineHeight3;
+$defaultFontSize: $fontSize4;
+
+$maxPhoneWidth: 767px;
+
+$minTabletWidth: 768px;
+$maxTabletWidth: 991px;
+
+$minComputerWidth: 992px;
+$maxComputerWidth: 1199px;
+
+$minLargeMonitorWidth: 1200px;
+$maxLargeMonitorWidth: 1919px;
+
+$minWideMonitorWidth: 1920px;

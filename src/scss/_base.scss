@@ -1,0 +1,46 @@
+@import './variables';
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  background-repeat: no-repeat;
+}
+
+p {
+  margin: 0;
+}
+html {
+  font-size: $defaultFontSize;
+  line-height: $defaultLineHeight;
+  background: $background;
+  word-break: break-all;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+nav ol,
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+}

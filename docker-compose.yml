@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  caboodle-frontend:
+    image: caboodlefrontend
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: development
+    container_name: caboodle-frontend
+    ports:
+      - 3000:3000
+      - 9229:9229
+    volumes:
+      - ./:/app
+      - '/app/node_modules'
