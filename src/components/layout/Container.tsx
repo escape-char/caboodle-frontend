@@ -8,6 +8,7 @@ type ContainerProps = BasePropsChildren & {
   fluidHeight?: boolean
   height?: string | number
   width?: string | number
+  role?: string
   padding?: Spacing
   inline?: boolean
 }
@@ -16,6 +17,7 @@ const defaultProps = {
   fluidWidth: false,
   fluidHeight: false,
   inline: false,
+  role: 'group',
   style: {}
 }
 
@@ -29,6 +31,7 @@ function Container(props: ContainerProps): ReactElement {
     width,
     inline,
     height,
+    role,
     padding
   } = props
   const classes = classNames(['container', className], {
@@ -37,7 +40,11 @@ function Container(props: ContainerProps): ReactElement {
     inline: inline
   })
   return (
-    <div className={classes} style={{ width, height, padding, ...style }}>
+    <div
+      role={role}
+      className={classes}
+      style={{ width, height, padding, ...style }}
+    >
       {children}
     </div>
   )

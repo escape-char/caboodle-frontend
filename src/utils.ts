@@ -36,13 +36,13 @@ export function classNames(
     }, '')
   }
 
-  if (typeof names == 'object' && !Array.isArray(names)) {
+  if (typeof names === 'object' && !Array.isArray(names)) {
     return filterObject(names as Record<string, unknown>)
   }
 
   const lClasses: Array<string | null | undefined> = !names
     ? []
-    : typeof names == 'string'
+    : typeof names === 'string'
     ? [names]
     : names
 
