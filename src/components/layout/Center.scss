@@ -1,0 +1,9 @@
+.center {
+  display: flex;
+  &.hor {
+    justify-content: center;
+  }
+  &.ver {
+    align-items: center;
+  }
+}
