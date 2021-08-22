@@ -45,7 +45,6 @@ test('test rendering of style', () => {
   const { getByText } = render(<Container style={style}>{TEXT}</Container>)
   const elem: HTMLElement = getByText(TEXT)
 
-  //test submit button is in document
   expect(elem).toHaveStyle(style)
 })
 
@@ -57,7 +56,6 @@ test('test rendering of passing width and height', () => {
   )
   const elem: HTMLElement = getByText(TEXT)
 
-  //test submit button is in document
   expect(elem).toHaveStyle({ width: '20px', height: '30px' })
 })
 
@@ -67,7 +65,6 @@ test('test rendering of padding', () => {
   )
   const elem: HTMLElement = getByText(TEXT)
 
-  //test submit button is in document
   expect(elem).toHaveStyle({ padding: `8px` })
 })
 
@@ -78,6 +75,5 @@ test('test rendering of className', () => {
   )
   const elem: HTMLElement = getByText(TEXT)
 
-  //test submit button is in document
   expect(elem).toHaveClass(className)
 })
