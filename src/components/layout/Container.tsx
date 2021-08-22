@@ -9,7 +9,7 @@ type ContainerProps = BasePropsChildren & {
   height?: string | number
   width?: string | number
   role?: string
-  padding?: Spacing
+  padding?: Spacing | string
   inline?: boolean
 }
 
