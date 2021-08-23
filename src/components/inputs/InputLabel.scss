@@ -1,0 +1,24 @@
+@import '../../scss/variables';
+
+.input-label {
+  font-weight: 600;
+  font-size: $defaultLabelFontSize;
+  line-height: $defaultLabelLineHeight;
+  color: $defaultLabelColor;
+  margin-bottom: $spacing2;
+
+  &.required {
+    &::after {
+      display: inline-block;
+      content: '*';
+      margin-left: $spacing2;
+      color: $infoColor;
+    }
+  }
+  &.disabled {
+    color: $disableColor;
+  }
+  &.error {
+    color: $errorColor;
+  }
+}

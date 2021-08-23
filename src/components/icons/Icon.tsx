@@ -1,12 +1,24 @@
 import React, { useEffect, useRef } from 'react'
 import { dashToUpperCamelCase } from '../../utils'
 
-interface IconProps extends React.SVGProps<SVGSVGElement> {
-  name: string
+export enum IconSize {
+  Tiny = 8,
+  Small = 14,
+  Medium = 16,
+  Large = 24,
+  Huge = 32,
+  Massive = 42
 }
 
+interface IconProps extends React.SVGProps<SVGSVGElement> {
+  name: string
+  size?: IconSize
+}
+
+const defaultProps = { size: IconSize.Small }
+
 const Icon: React.FC<IconProps> = (props: IconProps): JSX.Element | null => {
-  const { name } = props
+  const { name, size } = props
   const ImportedIconRef = useRef<React.FC<React.SVGProps<SVGSVGElement>>>()
   const [loading, setLoading] = React.useState(false)
 
@@ -28,10 +40,11 @@ const Icon: React.FC<IconProps> = (props: IconProps): JSX.Element | null => {
 
   if (!loading && ImportedIconRef.current) {
     const { current: ImportedIcon } = ImportedIconRef
-    return <ImportedIcon className="icon" role="img" />
+    return <ImportedIcon width={size} height={size} className="icon" />
   }
 
   return null
 }
 
+Icon.defaultProps = defaultProps
 export default Icon

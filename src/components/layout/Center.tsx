@@ -41,7 +41,6 @@ function Center(props: CenterProps): ReactElement {
 
   return (
     <Container
-      role="group"
       className={classes}
       padding={padding}
       width={width}
