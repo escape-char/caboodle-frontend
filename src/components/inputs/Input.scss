@@ -1,0 +1,76 @@
+@import '../../scss/variables';
+
+.input-container {
+  display: inline-block;
+  width: auto;
+
+  & > .input {
+    display: inline-block;
+    width: 15em;
+    border: $defaultBorderSize solid $borderColor;
+    font-size: $defaultFontSize;
+    line-height: $defaultLineHeight;
+    border-radius: $defaultBorderRadius;
+    background: $white;
+    padding: $spacing1;
+
+    > input {
+      font-weight: 400;
+      font-size: $defaultFontSize;
+      border: none;
+      width: 100%;
+      border-radius: 0px;
+      line-height: $defaultLineHeight;
+    }
+
+    > input:disabled {
+      background: $disableBackground;
+      cursor: not-allowed;
+      color: $disableColor;
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    color: $disableColor;
+
+    & > .input {
+      background: $disableBackground;
+    }
+  }
+
+  &.icon {
+    & > .input {
+      > .icon {
+        position: absolute;
+        color: $secondaryColor;
+        margin-right: $spacing2;
+      }
+      > input {
+        text-indent: $spacing5;
+      }
+    }
+  }
+
+  &.read-only {
+    & > .input {
+      background: inherit;
+      border: none;
+    }
+  }
+
+  &.focus {
+    & > .input {
+      border-color: $infoColor;
+      & > .icon {
+        color: $infoColor;
+      }
+    }
+    &.error > .input {
+      border-color: $errorColor;
+      & > .icon {
+        color: $errorColor;
+      }
+    }
+  }
+}

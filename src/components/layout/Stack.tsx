@@ -48,7 +48,6 @@ function Stack(props: StackProps): ReactElement {
 
   return (
     <Container
-      role="list"
       className={classes}
       fluidHeight={fluidHeight}
       fluidWidth={fluidWidth}
@@ -71,7 +70,7 @@ const stackItemDefaultProps = {
 }
 function StackItem(props: StackItemProps): ReactElement {
   const classes = classNames(['stack-item', props.className])
-  return <Container role="listitem" {...props} className={classes} />
+  return <Container {...props} className={classes} />
 }
 
 function HorizontalStack(props: BaseStackProps): ReactElement {

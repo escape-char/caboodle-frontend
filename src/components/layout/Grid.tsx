@@ -32,11 +32,7 @@ function Grid(props: GridProps): ReactElement {
   const { padding, gap, className, style, children } = props
   const classes = classNames(['grid', className])
   return (
-    <Container
-      role="grid"
-      className={classes}
-      style={{ padding, gap, ...style }}
-    >
+    <Container className={classes} style={{ padding, gap, ...style }}>
       {children}
     </Container>
   )
@@ -51,7 +47,7 @@ export function GridRow({
 }: GridRowProps): ReactElement {
   const classes = classNames(['row', className])
   return (
-    <Container role="row" className={classes} style={style}>
+    <Container className={classes} style={style}>
       {children}
     </Container>
   )
@@ -94,7 +90,7 @@ function GridColumn(props: GridColumnProps): ReactElement {
     [only || '']: only
   })
   return (
-    <Container role="gridcell" className={classes} style={style}>
+    <Container className={classes} style={style}>
       {children}
     </Container>
   )

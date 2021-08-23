@@ -13,6 +13,19 @@ $green: #52c41a;
 $red: #ff4d4f;
 $yellow: #fadb14;
 
+$gray1: #ffffff;
+$gray2: #fafafa;
+$gray4: #f0f0f0;
+$gray5: #d9d9d9;
+$gray6: #bfbfbf;
+$gray7: #8c8c8c;
+$gray8: #595959;
+$gray9: #434343;
+$gray10: #262626;
+$gray11: #1f1f1f;
+$gray12: #141414;
+$gray13: #000000;
+
 $white: white;
 $black: black;
 
@@ -20,9 +33,11 @@ $black: black;
 $primaryColor: lighten($black, 15%);
 $secondaryColor: lighten($black, 55%);
 $disableColor: lighten($black, 75%);
+$disableBackground: lighten($black, 90%);
 
 $borderColor: lighten($black, 85%);
 $defaultBorderRadius: 5px;
+$defaultBorderSize: 2px;
 $dividerColor: lighten($black, 94%);
 
 $background: lighten(black, 96%);
@@ -51,7 +66,7 @@ $fontSize1: 8px;
 $fontSize2: 12px;
 $fontSize3: 14px;
 $fontSize4: 16px;
-$fontSize4: 20px;
+$fontSize5: 20px;
 $fontSize6: 24px;
 $fontSize7: 30px;
 $fontSize8: 38px;
@@ -72,8 +87,13 @@ $lineHeight9: 54px;
 $lineHeight10: 64px;
 $lineHeight1: 76px;
 
-$defaultLineHeight: $lineHeight3;
+$defaultLineHeight: $lineHeight4;
+
 $defaultFontSize: $fontSize4;
+
+$defaultLabelFontSize: $fontSize3;
+$defaultLabelLineHeight: $lineHeight3;
+$defaultLabelColor: $gray9;
 
 $maxPhoneWidth: 767px;
 

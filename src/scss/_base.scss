@@ -13,6 +13,7 @@
 
 p {
   margin: 0;
+  font-weight: 100;
 }
 html {
   font-size: $defaultFontSize;
@@ -43,4 +44,10 @@ nav ul {
 
 table {
   border-collapse: collapse;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
 }
