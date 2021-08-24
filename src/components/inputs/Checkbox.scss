@@ -1,0 +1,41 @@
+@import '../../scss/variables';
+
+.checkbox {
+  display: block;
+  position: relative;
+
+  cursor: pointer;
+
+  > .icon {
+    position: absolute;
+    left: 0;
+    top: 5px;
+  }
+
+  > .input-label {
+    margin-left: 24px;
+    > label {
+      cursor: pointer;
+    }
+  }
+
+  &.checked {
+    > .icon {
+      color: $brandColor;
+    }
+  }
+
+  &.inline {
+    display: inline-block;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    > .icon {
+      color: $disableColor;
+    }
+    > .input-label > label {
+      cursor: not-allowed;
+    }
+  }
+}
