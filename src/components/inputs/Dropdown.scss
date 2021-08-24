@@ -1,0 +1,111 @@
+@import '../../scss/variables';
+
+.dropdown {
+  &.inline {
+    display: inline-block;
+  }
+
+  &.fluid {
+    width: 100%;
+  }
+  > .dropdown-button {
+    position: relative;
+    display: block;
+    width: 15em;
+    background: $white;
+    padding: $spacing1 $spacing2;
+    text-align: left;
+    border: $defaultBorderSize solid $borderColor;
+    font-size: $defaultFontSize;
+    line-height: $defaultLineHeight;
+    border-radius: $defaultBorderRadius;
+
+    > .icon {
+      color: $primaryColor;
+      position: absolute;
+      top: 5px;
+      right: $spacing2;
+    }
+
+    &:hover {
+      border-color: $infoColor;
+      > .icon {
+        color: $infoColor;
+      }
+    }
+  }
+
+  &.placeholder > .dropdown-button {
+    color: $borderColor;
+  }
+  &.focus > .dropdown-button {
+    border-color: $infoColor;
+    > .icon {
+      color: $infoColor;
+    }
+  }
+  &.focus.error > .dropdown-button,
+  &.error > .dropdown-button:hover {
+    border-color: $errorColor;
+    > .icon {
+      color: $errorColor;
+    }
+  }
+
+  & > .dropdown-menu {
+    background: $white;
+    margin: 0;
+    padding: 0;
+    width: 15em;
+    border: $defaultBorderSize solid $borderColor;
+    text-decoration: none;
+    list-style: none;
+
+    & > .dropdown-menu-item-container {
+      padding: $spacing1 0;
+      cursor: pointer;
+      text-decoration: none;
+      margin-bottom: $spacing1;
+
+      &:hover,
+      &.selected {
+        background: lighten($brandColor, 30%);
+        color: white;
+      }
+      & > .dropdown-menu-item {
+        margin-left: $spacing4;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.disabled {
+    > .dropdown-button {
+      cursor: not-allowed;
+      color: $disableColor;
+      background: $disableBackground;
+
+      > .icon {
+        color: $disableColor;
+      }
+      &:hover {
+        border: $defaultBorderSize solid $borderColor;
+        > .icon {
+          color: $disableColor;
+        }
+      }
+    }
+  }
+  &.loading {
+    > .dropdown-button {
+      text-indent: 20px;
+      > .icon {
+        &.loading {
+          left: $spacing2;
+        }
+      }
+    }
+  }
+}

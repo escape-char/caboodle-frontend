@@ -12,7 +12,7 @@
     line-height: $defaultLineHeight;
     border-radius: $defaultBorderRadius;
     background: $white;
-    padding: $spacing1;
+    padding: $spacing1 $spacing2;
 
     > input {
       font-weight: 400;
