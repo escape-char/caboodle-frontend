@@ -1,4 +1,4 @@
-import { ReactElement } from 'react'
+import { ReactElement, MouseEvent } from 'react'
 import { classNames } from '../../utils'
 import { Spacing, BasePropsChildren } from '../types/components'
 import './Container.scss'
@@ -9,6 +9,7 @@ type ContainerProps = BasePropsChildren & {
   height?: string | number
   width?: string | number
   padding?: Spacing | string
+  onClick?: (e: MouseEvent<HTMLDivElement>) => void
   inline?: boolean
 }
 
@@ -26,6 +27,7 @@ function Container(props: ContainerProps): ReactElement {
     fluidWidth,
     fluidHeight,
     style,
+    onClick,
     width,
     inline,
     height,
@@ -37,7 +39,11 @@ function Container(props: ContainerProps): ReactElement {
     inline: inline
   })
   return (
-    <div className={classes} style={{ width, height, padding, ...style }}>
+    <div
+      className={classes}
+      style={{ width, height, padding, ...style }}
+      onClick={onClick}
+    >
       {children}
     </div>
   )
