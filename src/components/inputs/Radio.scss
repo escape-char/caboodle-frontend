@@ -1,0 +1,91 @@
+@import '../../scss/variables';
+
+.radio-container > .radios {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  > .radio {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: $spacing2;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    > .input-label {
+      margin-left: 25px;
+      font-weight: 400;
+      margin-bottom: 0px;
+      > label {
+        cursor: pointer;
+      }
+    }
+    > .checkmark {
+      position: absolute;
+      top: 4px;
+      left: 0;
+      height: 16px;
+      width: 16px;
+      background: $white;
+      border: 1px solid $borderColor;
+      border-radius: 50%;
+
+      &::after {
+        content: '';
+        display: none;
+        position: absolute;
+      }
+    }
+
+    &:hover {
+      > .input-label {
+        font-weight: 500;
+      }
+      > .checkmark {
+        background: darken($white, 10%);
+      }
+    }
+
+    &.checked {
+      > .input-label {
+        font-weight: 500;
+      }
+      > .checkmark {
+        &::after {
+          top: 2.1px;
+          left: 2.1px;
+          width: 10px;
+          height: 10px;
+          display: block;
+          border-radius: 50%;
+          background: $brandColor;
+        }
+      }
+    }
+  }
+  &.inline {
+    > .radio {
+      display: inline-block;
+      margin-right: $spacing3;
+    }
+  }
+  &.disabled {
+    > .radio {
+      cursor: not-allowed;
+      > .input-label {
+        color: $disableColor;
+        > label {
+          cursor: not-allowed;
+        }
+      }
+
+      &:hover {
+        > .checkmark {
+          background: $white;
+        }
+      }
+    }
+  }
+}
