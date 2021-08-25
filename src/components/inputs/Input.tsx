@@ -1,5 +1,5 @@
 import { ChangeEvent, ReactElement, ReactNode, useState } from 'react'
-import { BaseProps, IconPosition } from '../types/components'
+import { BaseProps } from '../types/components'
 import Container from '../layout/Container'
 import InputLabel from './InputLabel'
 import { classNames } from '../../utils'

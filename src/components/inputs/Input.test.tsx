@@ -123,7 +123,7 @@ test('test passing in required', () => {
 })
 
 test('test passing in error', () => {
-  const { input, label } = setup({
+  const { input } = setup({
     name: 'input1',
     label: 'test label',
     error: true
@@ -142,7 +142,7 @@ test('test passing in icon', async () => {
       icon: 'alert-circle'
     })
   })
-  const { container, input, props } = result
+  const { container, input } = result
   const icon = container.querySelector('svg.icon')
 
   expect(icon).toBeInTheDocument()
@@ -185,7 +185,7 @@ test('test passing in inline', () => {
 })
 
 test('test passing in type', () => {
-  const { input, label, props } = setup({
+  const { input, props } = setup({
     name: 'input1',
     label: 'test label',
     type: 'password'
