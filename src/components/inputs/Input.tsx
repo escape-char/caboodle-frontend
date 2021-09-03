@@ -1,4 +1,11 @@
-import { ChangeEvent, ReactElement, ReactNode, useState } from 'react'
+import {
+  ChangeEvent,
+  FocusEvent,
+  MouseEvent,
+  ReactElement,
+  ReactNode,
+  useState
+} from 'react'
 import { BaseProps } from '../types/components'
 import Container from '../layout/Container'
 import InputLabel from './InputLabel'
@@ -8,17 +15,18 @@ import './Input.scss'
 
 export type InputProps = BaseProps & {
   defaultValue?: string | number
-  disabled: boolean
+  disabled?: boolean
   error?: boolean
   icon?: string
   inline?: boolean
   label?: string | ReactNode
-  onBlur?: (value?: string | number) => void
-  onChange?: (value?: string | number) => void
+  onBlur?: (value: string | number, e: FocusEvent<HTMLInputElement>) => void
+  onChange?: (value: string | number, e: ChangeEvent<HTMLInputElement>) => void
   name: string
   readOnly?: boolean
   required?: boolean
   type?: string
+  inputRef?: any
   placeholder?: string
 }
 
@@ -44,12 +52,13 @@ function Input(props: InputProps): ReactElement {
     label,
     inline,
     icon,
+    inputRef,
     type,
     placeholder,
     onChange,
     onBlur
   } = props
-  const [value, setValue] = useState<string | number | undefined>(defaultValue)
+  const [value, setValue] = useState<string | number>(defaultValue || '')
   const [focus, setFocus] = useState<boolean>(false)
 
   const classes = classNames(['input-container', props.className], {
@@ -64,12 +73,12 @@ function Input(props: InputProps): ReactElement {
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
     setValue(e.target.value)
-    onChange && onChange(e.target.value)
+    onChange && onChange(e.target.value, e)
   }
   const handleFocus = () => setFocus(true)
-  const handleBlur = () => {
+  const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
     setFocus(false)
-    onBlur && onBlur(value)
+    onBlur && onBlur(value, e)
   }
   return (
     <Container className={classes} style={props.style}>
@@ -83,6 +92,7 @@ function Input(props: InputProps): ReactElement {
         {!readOnly && (
           <input
             name={name}
+            ref={inputRef}
             type={type}
             readOnly={readOnly}
             placeholder={placeholder}

@@ -27,6 +27,7 @@ export type DropdownProps = BaseProps & {
   loading?: boolean
   inline?: boolean
   onChange?: (value?: string | number) => void
+  onBlur?: (value?: string | number) => void
   options?: Array<DropdownItem>
   placeholder?: string
   required?: boolean
@@ -56,6 +57,7 @@ function Dropdown(props: DropdownProps): ReactElement {
     loading,
     inline,
     onChange,
+    onBlur,
     options,
     placeholder,
     required,
@@ -71,6 +73,7 @@ function Dropdown(props: DropdownProps): ReactElement {
 
     if (!node.current || !contains) {
       setOpen(false)
+      onBlur && onBlur(value)
     }
   }
 
@@ -78,6 +81,9 @@ function Dropdown(props: DropdownProps): ReactElement {
     setOpen(false)
     setSelectedOpt(o)
     onChange && onChange(o.value)
+    setTimeout(() => {
+      onBlur && onBlur(o.value)
+    }, 300)
   }
 
   useEffect(() => {

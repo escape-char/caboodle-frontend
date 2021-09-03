@@ -1,0 +1,22 @@
+@import '../../scss//variables';
+
+.form {
+  > form {
+    min-width: 300px;
+  }
+  .form-group {
+    .form-field {
+      margin-bottom: $spacing3;
+
+      > .error {
+        margin-top: $spacing1;
+        text-indent: $spacing2;
+        color: $errorColor;
+
+        font-weight: 500;
+        font-size: $fontSize2;
+        max-width: 25em;
+      }
+    }
+  }
+}

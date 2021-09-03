@@ -25,12 +25,13 @@ export enum ColWidth {
 }
 export type GridProps = BasePropsChildren & {
   padding?: Spacing
+  fluid?: boolean
   gap?: Spacing
 }
 
 function Grid(props: GridProps): ReactElement {
-  const { padding, gap, className, style, children } = props
-  const classes = classNames(['grid', className])
+  const { padding, fluid, gap, className, style, children } = props
+  const classes = classNames(['grid', className], { fluid })
   return (
     <Container className={classes} style={{ padding, gap, ...style }}>
       {children}
