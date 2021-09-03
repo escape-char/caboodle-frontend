@@ -50,3 +50,15 @@ export function classNames(
   const filteredObj: string = filterObject(objClass)
   return filteredNames + filteredObj
 }
+
+export function pick(
+  obj: Record<string, unknown>,
+  keys: Array<string>
+): Record<string, unknown> {
+  return keys.reduce((acc: Record<string, unknown>, k: string) => {
+    if (obj[k] !== undefined) {
+      acc[k] = obj[k]
+    }
+    return acc
+  }, {})
+}

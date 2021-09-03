@@ -24,6 +24,10 @@ $sixteenColumn: percentage(16 / $gridSize);
   padding: $spacing2;
   flex-wrap: wrap;
 
+  &.fluid {
+    width: 100%;
+  }
+
   .row {
     flex-direction: row;
     width: 100%;

@@ -1,6 +1,7 @@
 .stack {
   display: flex;
   flex-wrap: wrap;
+  justify-content: left;
 
   &.horizontal {
     flex-direction: row;

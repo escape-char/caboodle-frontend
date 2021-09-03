@@ -9,11 +9,17 @@ export enum StackDirection {
   Horizontal = 'horizontal'
 }
 
+export enum JustifyContent {
+  Left = 'left',
+  Right = 'right'
+}
+
 type BaseStackProps = BasePropsChildren & {
   spacing?: Spacing
   padding?: Spacing
   fluidHeight?: boolean
   fluidWidth?: boolean
+  justifyContent?: JustifyContent
 }
 
 export type StackProps = BaseStackProps & {
@@ -38,6 +44,7 @@ function Stack(props: StackProps): ReactElement {
     className,
     style,
     direction,
+    justifyContent,
     padding,
     spacing
   } = props
@@ -52,7 +59,7 @@ function Stack(props: StackProps): ReactElement {
       fluidHeight={fluidHeight}
       fluidWidth={fluidWidth}
       padding={padding}
-      style={{ gap: spacing, ...style }}
+      style={{ gap: spacing, justifyContent, ...style }}
     >
       {children}
     </Container>
