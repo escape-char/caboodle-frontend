@@ -1,0 +1,45 @@
+@import '../../scss/variables';
+
+.tags {
+  padding: $spacing2 $spacing2;
+  display: inline-block;
+
+  > .tag {
+    position: relative;
+    display: inline-block;
+
+    font-size: $fontSize2;
+    font-weight: 500;
+    margin-right: $spacing2;
+    display: inline-block;
+    background: $brandColor;
+    border-radius: 20px;
+    padding: $spacing1 $spacing3;
+    color: $white;
+  }
+
+  &.edit {
+    background: $white;
+    border: 1px solid $borderColor;
+
+    > input {
+      border: none;
+    }
+
+    > .tag > .close {
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: $fontSize2;
+      background: $blue8;
+      top: 10px;
+      right: 0;
+      margin-left: $spacing2;
+      color: white;
+      border: none;
+
+      &:hover {
+        background: darken($blue8, 10%);
+      }
+    }
+  }
+}
