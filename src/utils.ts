@@ -62,3 +62,41 @@ export function pick(
     return acc
   }, {})
 }
+
+export function range(start = 0, end: number, increment = 1): Array<any> {
+  const isEndDef = typeof end !== 'undefined'
+  const newEnd = isEndDef ? end : start
+  const newStart = isEndDef ? start : 0
+  const newInc =
+    typeof increment === 'undefined' ? Math.sign(newEnd - newStart) : increment
+  const length = Math.abs((newEnd - newStart) / (newInc || 1))
+
+  const { result } = Array.from({ length }).reduce(
+    ({ result, current }) => ({
+      // append the current value to the result array
+      result: [...result, current],
+      // adding the increment to the current item
+      // to be used in the next iteration
+      current: current + newInc
+    }),
+    { current: newStart, result: [] }
+  )
+
+  return result
+}
+
+export function debounce(
+  func: (...parameters: any[]) => any,
+  delay: number,
+  leading = false
+): (...args: any[]) => void {
+  let timerId: ReturnType<typeof setTimeout>
+
+  return (...args: any[]): void => {
+    if (!timerId && leading) {
+      func(...args)
+    }
+    clearTimeout(timerId)
+    timerId = setTimeout(() => func(...args), delay)
+  }
+}
