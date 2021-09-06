@@ -7,3 +7,5 @@ export {
   HorizontalStack,
   VerticalStack
 } from './layout/Stack'
+
+export { default as Message, MessageType } from './Message'

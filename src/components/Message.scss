@@ -1,0 +1,99 @@
+@import '../scss/variables';
+
+.message {
+  padding: $spacing3;
+  border-radius: 5px;
+  position: relative;
+
+  &.hide {
+    display: none;
+  }
+
+  > .close {
+    cursor: pointer;
+    position: absolute;
+    right: 16px;
+    top: 24px;
+    font-size: $fontSize5;
+    color: $gray7;
+    background: inherit;
+    border: none;
+  }
+
+  > .icon {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+  }
+
+  > .header {
+    color: $gray9;
+    font-size: 800;
+    margin: 0;
+    margin-left: 64px;
+  }
+
+  > .content {
+    color: $gray8;
+    margin-left: 64px;
+  }
+
+  &.info {
+    background: $blue1;
+    border: 1px solid $blue5;
+
+    > .icon {
+      color: $blue5;
+    }
+    > .close {
+      color: lighten($blue5, 20%);
+      &:hover {
+        color: $blue5;
+      }
+    }
+  }
+  &.error {
+    background: $red1;
+    border: 1px solid $red5;
+
+    > .icon {
+      color: $red5;
+    }
+
+    > .close {
+      color: lighten($red5, 20%);
+      &:hover {
+        color: $red5;
+      }
+    }
+  }
+  &.warning {
+    background: $yellow1;
+    border: 1px solid $yellow7;
+    > .icon {
+      color: $yellow7;
+    }
+    > .close {
+      color: lighten($yellow7, 20%);
+      &:hover {
+        color: $yellow7;
+      }
+    }
+  }
+  &.success {
+    background: $green1;
+    border: 1px solid $green5;
+
+    > .icon {
+      color: $green5;
+    }
+
+    > .close {
+      color: lighten($green5, 20%);
+
+      &:hover {
+        color: $green5;
+      }
+    }
+  }
+}
